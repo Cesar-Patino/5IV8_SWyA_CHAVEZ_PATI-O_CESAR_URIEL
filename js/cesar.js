@@ -6,15 +6,15 @@ function cifrarCesar(operacion){
     'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
     if(mensaje == ""){
         Swal.fire({
-            icon: 'error',
-            title: 'Falta data hermano',
-            text: 'No hermano, te falto el mensaje pai',
+            icon: 'Error',
+            title: 'Falta data',
+            text: 'Falta el mensaje',
         });
     }else if(clave == ""){
         Swal.fire({
-            icon: 'error',
-            title: 'Falta data hermano',
-            text: 'No hermano, te falto la clave pai',
+            icon: 'Error',
+            title: 'Falta data',
+            text: 'Falta el mensaje',
         });
     }else{
         mensaje = mensaje.toLowerCase();

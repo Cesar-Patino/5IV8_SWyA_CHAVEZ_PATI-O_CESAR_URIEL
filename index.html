@@ -6,99 +6,84 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Cifrados de sustitución</title>
         <link rel="stylesheet" href="./css/bootstrap.min.css"/>
-        <link rel="stylesheet" href="./css/masterstyle.css"/>
+        <link rel="stylesheet" href="./css/style.css"/>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-        <script src="./js/main.js"></script>
+        <script src="./js/funcion.js"></script>
         <script src="./js/cesar.js"></script>
         <script src="./js/vigenere.js"></script>
     </head>
     <body>
         <div class="wrap shadow-lg">
             <ul class="tabs">
-                <li>
+                <li align="center">
                     <a href="#tab1">
-                        <span>
-                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-a-b" width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                                <path d="M3 16v-5.5a2.5 2.5 0 0 1 5 0v5.5m0 -4h-5" />
-                                <line x1="12" y1="6" x2="12" y2="18" />
-                                <path d="M16 16v-8h3a2 2 0 0 1 0 4h-3m3 0a2 2 0 0 1 0 4h-3" />
-                            </svg>
-                        </span>
-                      <span class="tab-text">Cesar</span>
+                      <span class="tab-text" align="center">César</span>
                     </a>
                 </li>
-                <li>
+                <li align="center">
                     <a href="#tab2">
-                        <span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-shape" width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                            <circle cx="5" cy="5" r="2" />
-                            <circle cx="19" cy="5" r="2" />
-                            <circle cx="5" cy="19" r="2" />
-                            <circle cx="19" cy="19" r="2" />
-                            <line x1="5" y1="7" x2="5" y2="17" />
-                            <line x1="7" y1="5" x2="17" y2="5" />
-                            <line x1="7" y1="19" x2="17" y2="19" />
-                            <line x1="19" y1="7" x2="19" y2="17" />
-                        </svg></span>
-                        <span class="tab-text">Vigenere</span>
+                        <span class="tab-text" align="center">Vigenere</span>
                     </a>
                 </li>
             </ul>
             <div class="secciones col">
                 <article id="tab1">
-                    <h1>Cifrado César</h1>
+                    <h1 align="center">Cifrado César</h1>
                     <br>
                     <form class="row g-3 needs-validation" name="cesar" novalidate>
                         <div>
-                            <div class="col">
+                            <div class="col" align="center">
                                 <label for="mensaje" class="form-label">Mensaje a cifrar</label>
-                                <input type="text" id="nombre" name="mensaje" class="form-control" onkeypress="return validarm(event)">
+                                <input style="background-color: #ffd19d" text" id="nombre" name="mensaje" class="form-control" onkeypress="return validarm(event)">
                             </div>
-                            <div class="col">
+                            <div class="col" align="center">
                                 <label for="clave" class="form-label">Clave</label>
-                                <input type="text" id="clave" name="clave" class="form-control" onkeypress="return validarn(event)" maxlength="3">
+                                <input style="background-color: #ffd19d" type="text" id="clave" name="clave" class="form-control" onkeypress="return validarn(event)" maxlength="3">
                             </div>
                         </div>
-                        <button onclick="return cifrarCesar('c')" class="btn btn-primary">Cifrar</button>
-                        <button onclick="return cifrarCesar('d')" class="btn btn-secondary">Decifrar</button>
-                        <div class="col">
+                        <button onclick="return cifrarCesar('c')" class="btn btn-primary" style="background-color: #fcb597; color: black; border-color: #fcb597;">Cifrar</button>
+                        <button onclick="return cifrarCesar('d')" class="btn btn-secondary" style="background-color: #fcb597; color: black; border-color: #fcb597;">Decifrar</button>
+                        <div class="col" align="center">
                             <label for="resultado" class="form-label">Mensaje cifrado</label>
-                            <input type="text" id="resultado" name="resultado" class="form-control" readonly>
+                            <input style="background-color: #ffd19d" type="text" id="resultado" name="resultado" class="form-control" readonly>
                         </div>
                     </form>
                     <br>
                     <div class="data">
-                        <h5>Alumno: CHAVEZ PATIÑO CESAR URIEL</h5>
-                        <h5>Grupo: 5IV8</h5>
+                        <h5>5IV8 CHAVEZ PATIÑO CESAR URIEL</h5>
+                    </div>
+                    <div class="data">
+                        <h5>SWyA JAIME MINOR GOMEZ</h5>
                     </div>
                 </article>
                 <article id="tab2">
-                    <h1>Cifrado de Vigenère</h1>
+                    <h1 align="center">Cifrado de Vigenere</h1>
                     <br>
                     <form class="row g-3 needs-validation" name="vigenere" novalidate>
                         <div>
-                            <div class="col">
+                            <div class="col" align="center">
                                 <label for="mensaje" class="form-label">Mensaje a cifrar</label>
-                                <input type="text" id="mess" name="mess" class="form-control" onkeypress="return validarm(event)">
+                                <input style="background-color: #ffd19d" type="text" id="mess" name="mess" class="form-control" onkeypress="return validarm(event)">
                             </div>
-                            <div class="col">
+                            <div class="col" align="center">
                                 <label for="clave" class="form-label">Clave</label>
-                                <input type="text" id="llave" name="llave" class="form-control" onkeypress="return validarc(event)">
+                                <input style="background-color: #ffd19d" type="text" id="llave" name="llave" class="form-control" onkeypress="return validarc(event)">
                             </div>
                         </div>
-                        <button onclick="return procesarV('c')" class="btn btn-primary">Cifrar</button>
-                        <button onclick="return procesarV('d')" class="btn btn-secondary">Decifrar</button>
-                        <div class="col">
+                        <button onclick="return procesarV('c')" class="btn btn-primary" style="background-color: #fcb597; color: black; border-color: #fcb597;">Cifrar</button>
+                        <button onclick="return procesarV('d')" class="btn btn-secondary" style="background-color: #fcb597; color: black; border-color: #fcb597;">Decifrar</button>
+                        <div class="col" align="center">
                             <label for="resultado" class="form-label">Mensaje cifrado</label>
-                            <input type="text" id="rs" name="rs" class="form-control" readonly>
+                            <input style="background-color: #ffd19d" type="text" id="rs" name="rs" class="form-control" readonly>
                         </div>
                     </form>
                     <br>
                     <div class="data">
-                        <h5>Alumno: CHAVEZ PATIÑO CESAR URIEL</h5>
-                        <h5>Grupo: 5IV8</h5>
+                        <h5>5IV8 CHAVEZ PATIÑO CESAR URIEL</h5>
+                    </div>
+                    <div class="data">
+                        <h5>SWyA JAIME MINOR GOMEZ</h5>
                     </div>
                 </article>
             </div>
