@@ -43,6 +43,5 @@ function cifrarCesar(operacion){
         }
         document.cesar.resultado.value = res;
     }
-
     return false;
 }
